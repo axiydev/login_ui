@@ -22,7 +22,6 @@ class _DataPageState extends State<DataPage> {
   @override
   void didChangeDependencies() {
     _size = MediaQuery.of(context).size;
-
     super.didChangeDependencies();
   }
 
