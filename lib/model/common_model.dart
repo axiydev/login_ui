@@ -1,15 +1,16 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:login_ui/model/user_model.dart';
 
-class CommonModel {
-  int? code;
-  List<UserModel>? data;
+part 'common_model.freezed.dart';
+part 'common_model.g.dart';
 
-  CommonModel.fromJson(Map<String, dynamic> json)
-      : code = json['code'],
-        data = List<UserModel>.from(
-            json['data'].map((user) => UserModel.fromJson(user)));
+@freezed
+class CommonModel with _$CommonModel {
+  const factory CommonModel({
+    required int code,
+    required List<UserModel> data,
+  }) = _CommonModel;
 
-  Map<String, dynamic> get toJson {
-    return {'code': code, "data": data!.map((e) => e.toJson)};
-  }
+  factory CommonModel.fromJson(Map<String, Object?> json) =>
+      _$CommonModelFromJson(json);
 }

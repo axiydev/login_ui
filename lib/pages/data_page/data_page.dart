@@ -64,11 +64,12 @@ class _DataPageState extends State<DataPage> {
   }
 
   Widget _customListTile(UserModel? model, int? indexId) {
+    var valueKey = ValueKey<String?>(indexId.toString());
     return Card(
-      key: ValueKey<String?>(indexId.toString()),
+      key: valueKey,
       child: ListTile(
-        title: Text(model!.name!),
-        subtitle: Text(model.profession!),
+        title: Text(model!.name),
+        subtitle: Text(model.profession),
         trailing: Text(model.age.toString()),
       ),
     );
