@@ -45,17 +45,17 @@ class _DataPageState extends State<DataPage> {
 
         return ReorderableListView.builder(
           shrinkWrap: true,
-          itemCount: snapshot.data!.data!.length,
+          itemCount: snapshot.data!.data.length,
           itemBuilder: (context, index) {
-            final UserModel user = snapshot.data!.data![index];
+            final UserModel user = snapshot.data!.data[index];
             return _customListTile(user, index);
           },
           onReorder: (oldIndex, newIndex) {
             if (newIndex > oldIndex) {
               newIndex -= 1;
             }
-            final user = snapshot.data!.data!.removeAt(oldIndex);
-            snapshot.data!.data!.insert(newIndex, user);
+            final user = snapshot.data!.data.removeAt(oldIndex);
+            snapshot.data!.data.insert(newIndex, user);
             // setState(() {});
           },
         );
