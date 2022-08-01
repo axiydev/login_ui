@@ -43,19 +43,29 @@ class _DataPageState extends State<DataPage> {
           );
         }
 
-        return ListView.builder(
-            shrinkWrap: true,
-            itemCount: snapshot.data!.data!.length,
-            itemBuilder: (context, index) {
-              final UserModel user = snapshot.data!.data![index];
-              return _customListTile(user);
-            });
+        return ReorderableListView.builder(
+          shrinkWrap: true,
+          itemCount: snapshot.data!.data!.length,
+          itemBuilder: (context, index) {
+            final UserModel user = snapshot.data!.data![index];
+            return _customListTile(user, index);
+          },
+          onReorder: (oldIndex, newIndex) {
+            if (newIndex > oldIndex) {
+              newIndex -= 1;
+            }
+            final user = snapshot.data!.data!.removeAt(oldIndex);
+            snapshot.data!.data!.insert(newIndex, user);
+            // setState(() {});
+          },
+        );
       },
     )));
   }
 
-  Widget _customListTile(UserModel? model) {
+  Widget _customListTile(UserModel? model, int? indexId) {
     return Card(
+      key: ValueKey<String?>(indexId.toString()),
       child: ListTile(
         title: Text(model!.name!),
         subtitle: Text(model.profession!),
