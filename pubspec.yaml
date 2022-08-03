@@ -34,8 +34,9 @@ flutter:
 
 
   assets:
-    - assets/images/im_party.jpeg
+    - assets/images/
     - assets/database/data.json
+
 
   # fonts:
   #   - family: Schyler

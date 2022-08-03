@@ -6,7 +6,9 @@ Created by Axmadjon Isaqov on 14:40:09 01.08.2022
 Mavzu:::Login UI
 */
 import 'package:flutter/material.dart';
+import 'package:login_ui/consts/consts.dart';
 import 'package:login_ui/pages/data_page/data_page.dart';
+import 'package:login_ui/pages/lesson/amazon_home_page.dart';
 import 'package:login_ui/pages/login/login_page.dart';
 
 void main() {
@@ -20,13 +22,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.blue,
+          iconTheme: const IconThemeData(color: UtilColors.amazonPrimaryColor)),
       routes: {
         '/login': (context) => const LoginPage(),
-        '/data': (context) => const DataPage()
+        '/data': (context) => const DataPage(),
+        AmazonHomePage.route: (context) => const AmazonHomePage()
       },
-      initialRoute: '/data',
+      initialRoute: AmazonHomePage.route,
     );
   }
 }
