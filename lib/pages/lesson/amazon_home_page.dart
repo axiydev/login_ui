@@ -48,6 +48,8 @@ class _AmazonHomePageState extends State<AmazonHomePage> {
           )
         ],
       ),
+
+      ///body
       body: SafeArea(
         child: Column(
           children: [
