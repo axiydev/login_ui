@@ -8,6 +8,7 @@ Mavzu:::Login UI
 import 'package:flutter/material.dart';
 import 'package:login_ui/consts/consts.dart';
 import 'package:login_ui/pages/data_page/data_page.dart';
+import 'package:login_ui/pages/fecebook/facebook_page.dart';
 import 'package:login_ui/pages/lesson/amazon_home_page.dart';
 import 'package:login_ui/pages/login/login_page.dart';
 import 'package:login_ui/pages/sliver_page/custom_sliver_page.dart';
@@ -29,9 +30,10 @@ class MyApp extends StatelessWidget {
         '/login': (context) => const LoginPage(),
         '/data': (context) => const DataPage(),
         CustomSliverPage.route: (context) => const CustomSliverPage(),
-        AmazonHomePage.route: (context) => const AmazonHomePage()
+        AmazonHomePage.route: (context) => const AmazonHomePage(),
+        FacebookPage.route: (context) => const FacebookPage()
       },
-      initialRoute: CustomSliverPage.route,
+      initialRoute: FacebookPage.route,
     );
   }
 }

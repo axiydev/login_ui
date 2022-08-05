@@ -19,6 +19,10 @@ dependencies:
   freezed: ^2.1.0+1
   freezed_annotation: ^2.1.0
   json_serializable: ^6.3.1
+  flutter_svg: ^1.1.2
+  font_awesome_flutter: ^10.1.0
+  badges: ^2.0.3
+  cached_network_image: ^3.2.1
 
 
 dev_dependencies:
@@ -36,6 +40,7 @@ flutter:
   assets:
     - assets/images/
     - assets/database/data.json
+    - assets/icons/
 
 
   # fonts:

@@ -9,6 +9,10 @@ class MyImages {
   static const String first = '${base}item_4.jpeg';
   static const String second = '${base}item_5.jpeg';
   static const String third = '${base}item_6.jpeg';
+  static const String avatar = '${base}avatar.png';
+  static const String short = '${base}short.png';
+  static const String shortOne = '${base}short_one.png';
+  static const String shortTwo = '${base}short_two.png';
 }
 
 class UtilColors {
@@ -18,4 +22,15 @@ class UtilColors {
   static const Color amazonBackColor = Color(0xFFe0e0e0);
   static Color deliverColor = const Color(0xFF617d8b);
   static const Color buttonColorAmazon = Color(0xFFff9800);
+  static const Color facebookPrimaryColor = Color(0xFF384CFF);
+}
+
+class MyIcons {
+  static const base = 'assets/icons/';
+  static const String fb = 'assets/icons/fb_messenger.png';
+  static const String video = 'assets/icons/Video.png';
+  static const String avatar = '${base}Avatar.png';
+  static const String avatar1 = '${base}Avatar1.png';
+  static const String oval = '${base}Oval.png';
+  static const String oval1 = '${base}Oval1.png';
 }
