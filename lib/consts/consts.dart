@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+typedef _S = String;
+
 class MyImages {
   static const base = 'assets/images/';
   static const party = 'assets/images/im_party.jpeg';
@@ -33,4 +35,30 @@ class MyIcons {
   static const String avatar1 = '${base}Avatar1.png';
   static const String oval = '${base}Oval.png';
   static const String oval1 = '${base}Oval1.png';
+}
+
+class InstaImages {
+  static const String base = 'assets/instagram/';
+  static const _S post1 = '${base}image_2.png';
+  static const _S post2 = '${base}image_3.png';
+  static const _S post3 = '${base}image_4.png';
+  static const _S post4 = '${base}image_5.png';
+  static const _S post5 = '${base}imageone.png';
+  static const _S post6 = '${base}image_3.png';
+  static const _S avatar = '${base}avatar.png';
+  static const _S avatar1 = '${base}avatar1.png';
+  static const _S avatar3 = '${base}dog_avatar.png';
+  static const _S mainAvatar = '${base}main_avatar.png';
+}
+
+class InstaIcons {
+  static const _S base = 'assets/instagram/icon/';
+  static const _S add = '${base}add.png';
+  static const _S comment = '${base}comment.png';
+  static const _S heart = '${base}heart.png';
+  static const _S messenger = '${base}messenger.png';
+  static const _S reels = '${base}Reels.png';
+  static const _S shop = '${base}Shop.png';
+  static const _S home = '${base}Vector.png';
+  static const _S share = '${base}Share.png';
 }
